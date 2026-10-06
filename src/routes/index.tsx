@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CloudFog, Search } from "lucide-react";
 import { useMemo, useState } from "react";
-import { Cover } from "@/components/cover";
+import { CapsuleCaption, Cover, PlatformBadge } from "@/components/cover";
 import { SaveButton } from "@/components/save-button";
 import { featuredGames, games, type Game } from "@/data/games";
 import { useSaved } from "@/lib/saved";
@@ -99,6 +99,9 @@ function Store() {
               className="relative block overflow-hidden rounded-sm ring-1 ring-header"
             >
               <Cover slug={spotlight.slug} priority className="aspect-video" />
+              <div className="absolute top-3 left-3 z-10">
+                <PlatformBadge platform={spotlight.platform} />
+              </div>
               <div className="hero-shade absolute inset-0" />
               <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4">
                 <div className="min-w-0">
@@ -117,10 +120,13 @@ function Store() {
             <div className="scroller -mx-3 flex gap-3 overflow-x-auto px-3 pb-1">
               {featured.map((game) => (
                 <Link key={game.slug} to="/g/$slug" params={{ slug: game.slug }} className="w-56 shrink-0">
-                  <div className="overflow-hidden rounded-sm ring-1 ring-header">
+                  <div className="relative overflow-hidden rounded-sm ring-1 ring-header">
                     <Cover slug={game.slug} className="aspect-video" />
+                    <div className="absolute top-1.5 left-1.5">
+                      <PlatformBadge platform={game.platform} />
+                    </div>
+                    <CapsuleCaption title={game.title} />
                   </div>
-                  <span className="mt-2 block truncate text-sm text-fg">{game.title}</span>
                 </Link>
               ))}
             </div>
@@ -152,16 +158,17 @@ function Store() {
               {shown.map((game) => (
                 <li key={game.slug} className="relative">
                   <Link to="/g/$slug" params={{ slug: game.slug }} className="group block">
-                    <div className="overflow-hidden rounded-sm ring-1 ring-header group-hover:ring-accent">
+                    <div className="relative overflow-hidden rounded-sm ring-1 ring-header group-hover:ring-accent">
                       <Cover
                         slug={game.slug}
                         className="aspect-video transition duration-200 group-hover:scale-105"
                       />
+                      <div className="absolute top-2 left-2">
+                        <PlatformBadge platform={game.platform} />
+                      </div>
+                      <CapsuleCaption title={game.title} />
                     </div>
-                    <span className="mt-2 block truncate text-sm text-fg group-hover:text-bright">
-                      {game.title}
-                    </span>
-                    <span className="block truncate text-xs text-muted">
+                    <span className="mt-2 block truncate text-xs text-muted">
                       {game.platform} · {game.year} · {game.genre}
                     </span>
                   </Link>

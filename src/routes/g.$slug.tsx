@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Info, X } from "lucide-react";
 import { useState, type ReactNode } from "react";
-import { Cover } from "@/components/cover";
+import { Cover, PlatformBadge } from "@/components/cover";
 import { SaveButton } from "@/components/save-button";
 import { controlsFor, getGame, type Game, type Status } from "@/data/games";
 import { useSaved } from "@/lib/saved";
@@ -122,6 +122,9 @@ function External({ game }: { game: Game }) {
       <div className="relative">
         <Cover slug={game.slug} priority className="aspect-video max-h-96" />
         <div className="hero-shade absolute inset-0" />
+        <div className="absolute top-3 left-3 z-10">
+          <PlatformBadge platform={game.platform} />
+        </div>
         <div className="absolute inset-x-0 bottom-0 p-4">
           <h1 className="text-3xl font-semibold text-bright">{game.title}</h1>
           <p className="text-sm text-fg">
