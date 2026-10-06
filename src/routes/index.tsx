@@ -180,9 +180,9 @@ function Store() {
         </section>
 
         <footer className="mt-10 max-w-xl text-xs leading-relaxed text-faint">
-          Capsules are original stand-in scenes, not retail covers, except OpenTTD, Freedoom, and
-          OpenTyrian, which use freely licensed screenshots. Vapor does not host game data. Builds are
-          unofficial. Names belong to their owners.{" "}
+          Capsules are original stand-in scenes in a vapor haze, not retail covers, except OpenTTD,
+          Freedoom, and OpenTyrian, which use freely licensed screenshots. Vapor does not host game
+          data. Builds are unofficial. Names belong to their owners.{" "}
           <a
             className="text-accent"
             href="https://decompgames.com/clean-room/"
