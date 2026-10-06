@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Search } from "lucide-react";
+import { CloudFog, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Cover } from "@/components/cover";
 import { SaveButton } from "@/components/save-button";
@@ -52,7 +52,7 @@ function Store() {
       <header className="sticky top-0 z-30 border-b border-raised bg-header">
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-3 px-3">
           <Link to="/" className="flex shrink-0 items-center gap-2 text-bright" aria-label="Vapor home">
-            <VaporMark />
+            <CloudFog className="size-6" strokeWidth={2} />
             <span className="text-lg font-bold tracking-widest">VAPOR</span>
           </Link>
           <label className="relative min-w-0 flex-1">
@@ -195,31 +195,5 @@ function Store() {
         </footer>
       </main>
     </div>
-  );
-}
-
-function VaporMark() {
-  return (
-    <svg viewBox="0 0 32 32" className="size-8" aria-hidden="true">
-      <path
-        fill="#c7d5e0"
-        fillRule="evenodd"
-        d="M4.6 21.4a7.2 7.2 0 1 0 14.4 0a7.2 7.2 0 1 0-14.4 0zm3.7 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0z"
-      />
-      <path
-        fill="none"
-        stroke="#c7d5e0"
-        strokeWidth="4"
-        strokeLinecap="round"
-        d="M15.4 16.2 22.6 8.2"
-      />
-      <path
-        fill="none"
-        stroke="#c7d5e0"
-        strokeWidth="4"
-        strokeLinecap="round"
-        d="M19.2 8.2H28.4"
-      />
-    </svg>
   );
 }

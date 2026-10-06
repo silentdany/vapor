@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Vapor">
-  <path fill="#c7d5e0" fill-rule="evenodd" d="M4.6 21.4a7.2 7.2 0 1 0 14.4 0a7.2 7.2 0 1 0-14.4 0zm3.7 0a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0z"/>
-  <path fill="none" stroke="#c7d5e0" stroke-width="4" stroke-linecap="round" d="M15.4 16.2 22.6 8.2"/>
-  <path fill="none" stroke="#c7d5e0" stroke-width="4" stroke-linecap="round" d="M19.2 8.2H28.4"/>
+  <rect width="32" height="32" rx="8" fill="#171a21"/>
+  <g transform="translate(4 4)" fill="none" stroke="#c7d5e0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/>
+    <path d="M16 17H7"/>
+    <path d="M17 21H9"/>
+  </g>
 </svg>
