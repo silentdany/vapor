@@ -18,6 +18,8 @@ export type Game = {
   repo: string
   /** True when the build reads a local file from a copy the player already owns. */
   needsFiles: boolean
+  /** Shown when the capsule is a screenshot someone else licensed. */
+  credit?: string
 }
 
 export const games: Game[] = [
@@ -313,7 +315,8 @@ export const games: Game[] = [
     "play": null,
     "page": "https://decompgames.com/games/freedoom/",
     "repo": "https://github.com/freedoom/freedoom",
-    "needsFiles": false
+    "needsFiles": false,
+    "credit": "Screenshot by Hugo Locurcio, BSD."
   },
   {
     "slug": "harvest-moon-64",
@@ -383,7 +386,8 @@ export const games: Game[] = [
     "play": null,
     "page": "https://decompgames.com/games/openttd/",
     "repo": "https://github.com/OpenTTD/OpenTTD",
-    "needsFiles": false
+    "needsFiles": false,
+    "credit": "Screenshot by Theki, GPL-2.0."
   },
   {
     "slug": "opentyrian",
@@ -397,7 +401,8 @@ export const games: Game[] = [
     "play": null,
     "page": "https://decompgames.com/games/opentyrian/",
     "repo": "https://github.com/opentyrian/opentyrian",
-    "needsFiles": false
+    "needsFiles": false,
+    "credit": "Screenshot by the OpenTyrian developers, CC BY 3.0."
   },
   {
     "slug": "pilotwings-64",

@@ -180,8 +180,9 @@ function Store() {
         </section>
 
         <footer className="mt-10 max-w-xl text-xs leading-relaxed text-faint">
-          Capsules are original key art, not retail covers. Vapor does not host game data. Builds are
-          unofficial. Names belong to their owners.{" "}
+          Capsules are original key art, except OpenTTD, Freedoom, and OpenTyrian, which use
+          freely licensed screenshots. Vapor does not host game data. Builds are unofficial. Names
+          belong to their owners.{" "}
           <a
             className="text-accent"
             href="https://decompgames.com/clean-room/"

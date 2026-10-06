@@ -189,6 +189,7 @@ function Facts({ game }: { game: Game }) {
   return (
     <div className="space-y-4 text-sm leading-relaxed">
       <p className="text-fg">{game.blurb}</p>
+      {game.credit ? <p className="text-muted">{game.credit}</p> : null}
       <p className="text-muted">
         {game.kind} · {statusLabel(game.status)}
       </p>
