@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #1b2838;
+  --color-header: #171a21;
+  --color-surface: #16202d;
+  --color-raised: #2a475e;
+  --color-search: #316282;
+  --color-fg: #c6d4df;
+  --color-muted: #8f98a0;
+  --color-faint: #67707b;
+  --color-line: #2a475e;
+  --color-accent: #66c0f4;
+  --color-accent-fg: #171a21;
+  --color-play: #a4d007;
+  --color-play-fg: #1a2a0a;
+  --color-bright: #ffffff;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.45;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-accent-fg);
+  }
+}
+
+.hero-shade {
+  background: linear-gradient(to top, var(--color-header) 0%, transparent 58%);
+}
+
+.scroller {
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
