@@ -316,7 +316,7 @@ export const games: Game[] = [
     "page": "https://decompgames.com/games/freedoom/",
     "repo": "https://github.com/freedoom/freedoom",
     "needsFiles": false,
-    "credit": "Screenshot by Hugo Locurcio, BSD."
+    "credit": "Modified from a screenshot by Hugo Locurcio, BSD."
   },
   {
     "slug": "harvest-moon-64",
@@ -387,7 +387,7 @@ export const games: Game[] = [
     "page": "https://decompgames.com/games/openttd/",
     "repo": "https://github.com/OpenTTD/OpenTTD",
     "needsFiles": false,
-    "credit": "Screenshot by Theki, GPL-2.0."
+    "credit": "Modified from a screenshot by Theki, GPL-2.0."
   },
   {
     "slug": "opentyrian",
@@ -402,7 +402,7 @@ export const games: Game[] = [
     "page": "https://decompgames.com/games/opentyrian/",
     "repo": "https://github.com/opentyrian/opentyrian",
     "needsFiles": false,
-    "credit": "Screenshot by the OpenTyrian developers, CC BY 3.0."
+    "credit": "Modified from a screenshot by the OpenTyrian developers, CC BY 3.0."
   },
   {
     "slug": "pilotwings-64",
